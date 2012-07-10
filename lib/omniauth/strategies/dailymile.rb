@@ -35,7 +35,7 @@ module OmniAuth
         # set these here instead of using 'option token_params' since omniauth-oath2 is passing those incorrectly
         access_token.options[:param_name] = 'oauth_token'
         access_token.options[:mode] = :query
-        @raw_info = JSON.parse access_token.get('/people/me').body
+        @raw_info = JSON.parse access_token.get('/people/me.json').body
       end
     end
   end
